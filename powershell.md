@@ -12,15 +12,26 @@ Some of these commands don't work as-is, and powershell will ask you for the res
 
 The intent with this is to be as simple as possible.
 
+# Navigation
 
+AutoComplete based on files in current working directory `<TAB>`
 
 # Zip Files
-
 `expand-archive <path to zip file>`
-
 `compress-archive <path to folder>`
 
+# Text Files
+Create a blank file
+`New-Item -ItemType file example.txt`
+`notepad example.txt`
 
-# Powershell Sciprts
+# Miscellaneous
 
+`Get-ComputerInfo`
+
+# Scripts
+If the Execution Policy allows execution, simply call the script like a executable file
 `.\<script path>`
+
+If powershell scripts are disabled, you can override the permissions by explicitly bypsasing the Execution Policy
+`powershell -ExecutionPolicy Bypass -File <script path>`
